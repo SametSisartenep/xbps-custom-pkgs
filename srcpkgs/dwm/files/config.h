@@ -2,9 +2,10 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"Inconsolata:size=12.5"
+	"Inconsolata:size=12.5",
+	"Material Icons:size=12.5:antialias=false:hinting=false",
 };
-static const char dmenufont[]       = "monospace:size=10";
+static const char dmenufont[]       = "monospace:size=11.5";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
@@ -16,8 +17,32 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
+#define icon_dashboard "\ue871"
+#define icon_view_quilt "\ue8f1"
+#define icon_view_carousel "\ue8eb"
+
+#define icon_web "\ue87a"
+#define icon_sys "\ue85c"
+#define icon_dev "\ue1b0"
+#define icon_mon "\ue2bd"
+#define icon_vm "\ue1bd"
+#define icon_files "\ue880"
+#define icon_irc "\ue0b7"
+#define icon_social "\ue7fb"
+#define icon_aux "\ue859"
+
 /* tagging */
-static const char *tags[] = { "Web", "Sys", "Dev", "Mon", "VM", "Files", "IRC", "Social", "AUX" };
+static const char *tags[] = {
+	icon_web,
+	icon_sys,
+	icon_dev,
+	icon_mon,
+	icon_vm,
+	icon_files,
+	icon_irc,
+	icon_social,
+	icon_aux,
+};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -37,9 +62,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ icon_view_quilt,     tile },    /* first entry is default */
+	{ icon_dashboard,      NULL },    /* no layout function means floating behavior */
+	{ icon_view_carousel,  monocle },
 };
 
 /* key definitions */
