@@ -5,8 +5,8 @@ static const char channel[]   = "Master";
 
 /* battery */
 static const char batterypath[] = "/sys/class/power_supply/";
-static const char batterynow[]  = "energy_now";
-static const char batteryfull[] = "energy_full_design";
+static const char batterynow[]  = "charge_now";
+static const char batteryfull[] = "charge_full_design";
 
 /* bar update interval in seconds (smallest value = 1) */
 static unsigned int update_interval = 1;
