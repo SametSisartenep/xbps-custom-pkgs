@@ -5,7 +5,7 @@ static const char *fonts[] = {
 	"Inconsolata:size=12.5",
 	"Material Icons:size=12.5:antialias=false:hinting=false",
 };
-static const char dmenufont[]       = "monospace:size=11.5";
+static const char dmenufont[]       = "Inconsolata:size=12.5";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
@@ -68,7 +68,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -81,7 +81,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "st", "-f", "Inconsolata:size=13.5", NULL };
+static const char *termcmd[]  = { "st", "-f", "Inconsolata:size=12.5", NULL };
 static const char *lockscr[]  = { "xautolock", "-locknow", NULL };
 
 static Key keys[] = {
